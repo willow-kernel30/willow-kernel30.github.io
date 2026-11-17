@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>花都影视在线观看-片单分类与播放体验指南</title>
+<meta name="description" content="花都影视在线观看专注片单整理与观看体验：按都市、悬疑、年代、动画等类型拆分类目，提供可核对的上新时间、清晰度标识、播放兼容与设备适配说明，附深度解析、体验步骤与常见问题。">
+<meta name="keywords" content="花都影视在线观看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2440'/%3E%3Cpath d='M18 20h28v6H18zm0 10h28v6H18zm0 10h18v6H18z' fill='%23e8b04b'/%3E%3Ccircle cx='48' cy='42' r='7' fill='%23e8b04b'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"花都影视在线观看","description":"片单分类与观看体验指南","inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"花都影视的都市剧片单适合哪个时段追？","acceptedAnswer":{"@type":"Answer","text":"都市剧单集48分钟左右，按每晚两集计算，一部24集剧约12天看完。2026年11月更新批次里《南岸写字楼》与《合租第七年》节奏接近，适合按周追。"}},
+{"@type":"Question","name":"高清播放需要多少带宽？","acceptedAnswer":{"@type":"Answer","text":"1080P稳定播放实测上行占用4—6Mbps，4K需18—24Mbps。移动网络建议先缓存前两集再通勤观看。"}},
+{"@type":"Question","name":"年代剧与悬疑剧的字幕有什么区别？","acceptedAnswer":{"@type":"Answer","text":"年代剧多为方言对白，标配双行注释字幕；悬疑剧字幕不提前透露线索，部分剧集提供“无剧透模式”选择项。"}},
+{"@type":"Question","name":"账号在多设备登录会互相踢下线吗？","acceptedAnswer":{"@type":"Answer","text":"同一账号最多同时在线3台设备，电视端与手机端共享额度，超出后最早登录的设备会退出播放。"}},
+{"@type":"Question","name":"为什么有的片单标注“试播”而不是正片？","acceptedAnswer":{"@type":"Answer","text":"试播集通常在正式上线前7天放出，用于观察弹幕反馈与完播率，画面与音轨可能做二次调整。"}},
+{"@type":"Question","name":"动画剧场的更新节奏是怎样的？","acceptedAnswer":{"@type":"Answer","text":"国产动画剧场多为周更，单集22—24分钟；日更短番单集8—12分钟，试播与总集篇不计入正片进度。"}}
+]}
+</script>
+<style>
+:root{
+  --ink:#1b2440;
+  --ink-2:#33405f;
+  --muted:#66708a;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --line:#dcd8cf;
+  --gold:#c98a2b;
+  --gold-soft:#f2e2c4;
+  --teal:#2f6f6b;
+  --red:#a4432f;
+  --radius:12px;
+  --shadow:0 1px 2px rgba(27,36,64,.06),0 8px 24px rgba(27,36,64,.06);
+  --gap:clamp(16px,2.4vw,28px);
+  --head-h:56px;
+  --notice-h:40px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","Source Han Serif SC",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.85;font-size:16px;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{line-height:1.35;margin:0;font-weight:700}
+h2{font-size:clamp(1.25rem,2.2vw,1.6rem)}
+h3{font-size:1.06rem}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+li{margin:.3em 0}
+.sans{font-family:"Noto Sans SC",system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif}
+
+/* 吸顶 */
+.notice-bar{
+  position:sticky;top:0;z-index:60;
+  background:var(--ink);color:#f4efe4;font-size:.86rem;
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  padding:0 16px;min-height:var(--notice-h);
+  font-family:"Noto Sans SC",system-ui,sans-serif;
+}
+.notice-bar b{color:#ffd68a;font-weight:600}
+.notice-bar .dot{width:6px;height:6px;border-radius:50%;background:#e8b04b;flex:none}
+.site-header{
+  position:sticky;top:var(--notice-h);z-index:55;
+  background:rgba(246,244,239,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:1240px;margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;gap:18px;min-height:var(--head-h);
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand-text{font-weight:800;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);line-height:1.2}
+.brand-text small{display:block;font-size:.66rem;color:var(--muted);font-weight:500;letter-spacing:.14em}
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.main-nav a{
+  padding:7px 10px;border-radius:8px;font-size:.9rem;color:var(--ink-2);
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:500;
+}
+.main-nav a:hover{background:var(--gold-soft);text-decoration:none}
+.main-nav a[aria-current="page"]{color:var(--red);font-weight:700}
+.header-tools{display:flex;align-items:center;gap:8px}
+.search-wrap{position:relative}
+.search-input{
+  width:150px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;
+  background:#fff;font-size:.86rem;font-family:inherit;color:var(--ink);
+}
+.search-input:focus{width:190px;border-color:var(--gold)}
+.search-feedback{
+  position:absolute;top:calc(100% + 6px);right:0;width:250px;background:#fff;
+  border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);
+  padding:10px 12px;font-size:.83rem;color:var(--ink-2);display:none;z-index:70;
+}
+.search-feedback.show{display:block}
+.search-feedback strong{color:var(--red)}
+.menu-btn{
+  display:none;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);
+  border-radius:8px;padding:7px 11px;font-size:.86rem;cursor:pointer;color:var(--ink);
+  font-family:"Noto Sans SC",system-ui,sans-serif;
+}
+.menu-btn:hover{border-color:var(--gold)}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 460px at 82% -10%, rgba(201,138,43,.20), transparent 62%),
+    linear-gradient(180deg,#fbf9f4 0%,var(--paper) 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{
+  max-width:1240px;margin:0 auto;padding:clamp(28px,5vw,56px) 20px clamp(30px,4vw,48px);
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--gap);align-items:center;
+  scroll-margin-top:calc(var(--notice-h) + var(--head-h) + 12px);
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.2em;
+  color:var(--teal);font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:700;
+  border:1px solid var(--teal);border-radius:999px;padding:4px 12px;margin-bottom:16px;
+}
+.hero h1{
+  font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:.01em;line-height:1.22;
+  margin-bottom:14px;
+}
+.hero-lead{
+  font-size:clamp(.98rem,1.5vw,1.06rem);color:var(--ink-2);max-width:36em;
+  margin-bottom:22px;
+}
+.hero-lead b{color:var(--ink);font-weight:700}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;
+  font-size:.94rem;font-weight:700;font-family:"Noto Sans SC",system-ui,sans-serif;
+  transition:transform .16s ease,box-shadow .16s ease;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none;box-shadow:var(--shadow)}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:.85rem;color:var(--muted);font-family:"Noto Sans SC",system-ui,sans-serif}
+.hero-stats b{display:block;font-size:1.22rem;color:var(--ink);font-family:"Noto Serif SC",serif}
+.hero-art{position:relative;min-height:300px;display:flex;align-items:center;justify-content:center}
+.hero-art svg{width:100%;height:auto;max-width:440px;filter:drop-shadow(0 14px 30px rgba(27,36,64,.14))}
+
+/* 布局 */
+.layout{
+  max-width:1240px;margin:0 auto;padding:0 20px;
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--gap);
+  align-items:start;
+}
+main{min-width:0;padding:var(--gap) 0}
+section[id]{scroll-margin-top:calc(var(--notice-h) + var(--head-h) + 12px)}
+.block{margin-bottom:calc(var(--gap) * 1.4)}
+.block-head{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+  border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:18px;flex-wrap:wrap;
+}
+.block-head h2{display:flex;align-items:center;gap:10px}
+.block-head h2::before{
+  content:"";width:8px;height:22px;border-radius:2px;background:var(--gold);flex:none;
+}
+.block-head .more{font-size:.83rem;color:var(--muted);font-family:"Noto Sans SC",system-ui,sans-serif}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* 概览 */
+.overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ov-item{padding:16px 16px 14px;border-left:3px solid var(--gold)}
+.ov-item h3{font-size:1rem;margin-bottom:6px}
+.ov-item p{font-size:.88rem;color:var(--ink-2);margin:0}
+.ov-item span{display:inline-block;margin-top:8px;font-size:.76rem;color:var(--teal);font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:600}
+
+/* 精选卡片网格 */
+.pick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.pick{overflow:hidden;display:flex;flex-direction:column}
+.pick img{aspect-ratio:16/10;width:100%;height:auto;object-fit:cover}
+.pick-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.pick-body h3{font-size:1rem;margin-bottom:6px}
+.pick-body p{font-size:.86rem;color:var(--ink-2);margin:0 0 10px}
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.tag{
+  font-size:.74rem;padding:2px 9px;border-radius:999px;background:var(--gold-soft);
+  color:#7a5210;font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:600;
+}
+.tag.t2{background:#e2eeec;color:#22524e}
+.tag.t3{background:#f0e6e2;color:#7d3222}
+
+/* 最新更新：紧凑列表 */
+.update-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.update-list li{
+  display:grid;grid-template-columns:78px minmax(0,1fr) auto;gap:12px;align-items:baseline;
+  padding:12px 4px;border-bottom:1px dashed var(--line);
+}
+.update-list time{font-size:.8rem;color:var(--muted);font-family:"Noto Sans SC",system-ui,sans-serif}
+.update-list .t{font-weight:700;font-size:.95rem}
+.update-list .t small{font-weight:400;color:var(--ink-2);margin-left:8px;font-size:.83rem}
+.update-list .meta{font-size:.76rem;color:var(--muted);font-family:"Noto Sans SC",system-ui,sans-serif;white-space:nowrap}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cat{
+  display:block;padding:12px 14px;border-radius:10px;background:#fff;border:1px solid var(--line);
+  color:var(--ink);font-family:"Noto Sans SC",system-ui,sans-serif;
+  transition:transform .16s ease,border-color .16s ease;
+}
+.cat:hover{transform:translateY(-2px);border-color:var(--gold);text-decoration:none}
+.cat b{display:block;font-size:.95rem;margin-bottom:2px}
+.cat span{font-size:.76rem;color:var(--muted)}
+
+/* 深度解析 */
+.article{padding:clamp(18px,3vw,30px)}
+.article .kicker{
+  font-size:.78rem;letter-spacing:.16em;color:var(--red);font-weight:700;
+  font-family:"Noto Sans SC",system-ui,sans-serif;margin-bottom:8px;
+}
+.article h2{font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:10px}
+.article .dek{color:var(--ink-2);font-size:.95rem;border-left:3px solid var(--gold);padding-left:12px;margin-bottom:20px}
+.article h3{margin:22px 0 8px;padding-top:6px}
+.article h3::before{content:"§ ";color:var(--gold)}
+.article p{text-align:justify}
+.check-panel{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:16px 0 20px;
+  font-family:"Noto Sans SC",system-ui,sans-serif;
+}
+.check-panel > div{padding:12px 14px;border-right:1px solid var(--line);background:#fdfbf7}
+.check-panel > div:last-child{border-right:0}
+.check-panel dt{font-size:.74rem;color:var(--muted);letter-spacing:.08em;margin-bottom:4px}
+.check-panel dd{margin:0;font-size:.9rem;font-weight:700}
+.quote{
+  margin:18px 0;padding:14px 18px;background:var(--gold-soft);border-radius:10px;
+  font-size:.94rem;color:#5b3f10;
+}
+.quote b{color:#3c2a08}
+.twocol{columns:2;column-gap:26px}
+@media (max-width:760px){.twocol{columns:1}}
+.fact-note{font-size:.82rem;color:var(--muted);font-family:"Noto Sans SC",system-ui,sans-serif}
+
+/* 体验步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:step;display:grid;gap:12px}
+.steps li{
+  counter-increment:step;display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;
+  padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:10px;
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:800;color:var(--gold);
+  font-size:1rem;border-right:1px solid var(--line);padding-right:10px;
+}
+.steps h3{font-size:.98rem;margin-bottom:4px}
+.steps p{font-size:.87rem;color:var(--ink-2);margin:0}
+
+/* FAQ */
+details.faq{
+  background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;
+  padding:0 16px;
+}
+details.faq[open]{border-color:var(--gold)}
+details.faq summary{
+  cursor:pointer;padding:13px 0;font-weight:700;font-size:.96rem;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:flex-start;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"＋";color:var(--gold);font-weight:800;flex:none}
+details.faq[open] summary::after{content:"－"}
+details.faq .ans{padding:0 0 14px;font-size:.9rem;color:var(--ink-2)}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.comment{padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:10px}
+.comment header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.avatar{
+  width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:.78rem;font-weight:800;color:#fff;font-family:"Noto Sans SC",system-ui,sans-serif;
+}
+.comment .who{font-size:.86rem;font-weight:700;font-family:"Noto Sans SC",system-ui,sans-serif}
+.comment .when{font-size:.74rem;color:var(--muted);margin-left:auto;font-family:"Noto Sans SC",system-ui,sans-serif}
+.comment p{margin:0;font-size:.88rem;color:var(--ink-2)}
+.comment .ref{
+  display:inline-block;margin-top:8px;font-size:.76rem;color:var(--teal);
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:600;
+}
+.stars{color:var(--gold);font-size:.8rem;letter-spacing:.1em}
+
+/* 相关资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.news{padding:14px 16px;border-left:3px solid var(--teal)}
+.news time{font-size:.75rem;color:var(--muted);font-family:"Noto Sans SC",system-ui,sans-serif}
+.news h3{font-size:.95rem;margin:4px 0 6px}
+.news p{font-size:.85rem;color:var(--ink-2);margin:0}
+
+/* 相关推荐标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:9px}
+.tag-index a{
+  padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);
+  font-size:.85rem;color:var(--ink-2);font-family:"Noto Sans SC",system-ui,sans-serif;
+  transition:transform .16s ease,border-color .16s ease;
+}
+.tag-index a:hover{transform:translateY(-2px);border-color:var(--gold);color:var(--ink);text-decoration:none}
+
+/* 榜单 */
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:rank}
+.rank-list li{
+  counter-increment:rank;display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;
+  align-items:center;padding:11px 6px;border-bottom:1px solid var(--line);
+}
+.rank-list li::before{
+  content:counter(rank);font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:800;
+  font-size:1rem;color:var(--muted);text-align:center;
+}
+.rank-list li:nth-child(-n+3)::before{color:var(--red)}
+.rank-list .rt{font-weight:700;font-size:.94rem}
+.rank-list .rs{font-size:.79rem;color:var(--muted);font-family:"Noto Sans SC",system-ui,sans-serif}
+.rank-list .rv{font-size:.8rem;color:var(--teal);font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:700;white-space:nowrap}
+
+/* 侧栏 */
+.sidebar{
+  min-width:0;padding:var(--gap) 0;position:sticky;top:calc(var(--notice-h) + var(--head-h) + 14px);
+}
+.side-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:var(--gap)}
+.side-card h2{font-size:.98rem;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.side-card h2::before{content:"· ";color:var(--gold)}
+.side-nav{list-style:none;padding:0;margin:0;font-family:"Noto Sans SC",system-ui,sans-serif}
+.side-nav a{
+  display:block;padding:7px 10px;border-radius:7px;font-size:.87rem;color:var(--ink-2);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:#faf7f0;text-decoration:none}
+.side-nav a.active{background:var(--gold-soft);border-left-color:var(--gold);color:var(--ink);font-weight:700}
+.side-card p{font-size:.85rem;color:var(--ink-2);margin:0 0 8px}
+.side-card p:last-child{margin-bottom:0}
+.side-tags{display:flex;flex-wrap:wrap;gap:7px}
+.side-tags a{
+  font-size:.78rem;padding:3px 10px;border-radius:999px;background:#f1eee7;color:#4a5268;
+  font-family:"Noto Sans SC",system-ui,sans-serif;
+}
+.side-tags a:hover{background:var(--gold-soft);color:var(--ink);text-decoration:none}
+
+/* 页脚 */
+.site-footer{background:var(--ink);color:#cfd4e0;margin-top:calc(var(--gap) * 1.6);font-family:"Noto Sans SC",system-ui,sans-serif}
+.footer-inner{max-width:1240px;margin:0 auto;padding:34px 20px 20px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.footer-brand svg{width:30px;height:30px}
+.footer-brand b{color:#fff;font-size:1rem}
+.footer-desc{font-size:.85rem;color:#a9b1c4;margin:0 0 10px}
+.footer-col h3{color:#fff;font-size:.88rem;margin-bottom:8px;letter-spacing:.06em}
+.footer-col ul{list-style:none;padding:0;margin:0;font-size:.84rem}
+.footer-col a{color:#b9c1d2}
+.footer-col a:hover{color:#ffd68a}
+.footer-bottom{
+  max-width:1240px;margin:0 auto;padding:14px 20px 26px;border-top:1px solid #2c3a5c;
+  font-size:.79rem;color:#8f99b0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:22px;z-index:50;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:#fff;color:var(--ink);font-size:1rem;cursor:pointer;box-shadow:var(--shadow);
+  display:none;place-items:center;font-family:"Noto Sans SC",system-ui,sans-serif;
+}
+.to-top.show{display:grid}
+
+/* 响应式 */
+@media (max-width:1080px){
+  .pick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .sidebar{position:static;padding-top:0}
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-art{order:-1;min-height:200px}
+  .hero-art svg{max-width:340px}
+  .overview{grid-template-columns:1fr}
+  .main-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--line);
+    padding:10px 16px;flex-direction:column;align-items:stretch;gap:2px;
+    box-shadow:var(--shadow);
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{padding:10px 8px}
+  .menu-btn{display:inline-flex}
+  .header-inner{position:relative;flex-wrap:wrap}
+  .search-wrap{margin-left:auto}
+}
+@media (max-width:760px){
+  .pick-grid{grid-template-columns:minmax(0,1fr)}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .comment-grid,.news-grid{grid-template-columns:minmax(0,1fr)}
+  .check-panel{grid-template-columns:1fr}
+  .check-panel > div{border-right:0;border-bottom:1px solid var(--line)}
+  .check-panel > div:last-child{border-bottom:0}
+  .update-list li{grid-template-columns:70px minmax(0,1fr);row-gap:2px}
+  .update-list .meta{grid-column:2;white-space:normal}
+  .search-input{width:120px}
+  .search-input:focus{width:140px}
+}
+@media (max-width:420px){
+  .header-inner{padding:10px 14px;gap:10px}
+  .brand-text{font-size:.95rem}
+  .brand-text small{letter-spacing:.08em}
+  .search-input{width:100px}
+  .search-input:focus{width:118px}
+  .footer-inner{grid-template-columns:1fr}
+  .to-top{right:12px;bottom:14px;width:40px;height:40px}
+  .notice-bar{font-size:.78rem;gap:8px;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,.cat:hover,.tag-index a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="notice-bar" role="status" aria-label="站点更新公告">
+  <span class="dot" aria-hidden="true"></span>
+  <span><b>11月8日</b> 更新 · 「都市剧」片单新增 6 部 · 1080P 片源兼容修复 3 项 · 年代剧字幕双行注释上线</span>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/#top" aria-label="花都影视在线观看首页">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <rect width="48" height="48" rx="11" fill="#1b2440"/>
+        <path d="M13 15h22v5H13zm0 9h22v5H13zm0 9h14v5H13z" fill="#e8b04b"/>
+        <circle cx="36" cy="34" r="6" fill="#e8b04b"/>
+        <path d="M34 31.2v5.6l5-2.8z" fill="#1b2440"/>
+      </svg>
+      <span class="brand-text">花都影视在线观看<small>片单 · 清晰度 · 播放体验</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选片单</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#category">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#rank">口碑榜</a>
+    </nav>
+    <div class="header-tools">
+      <div class="search-wrap">
+        <label for="siteSearch" class="sans" style="position:absolute;left:-9999px">站内搜索</label>
+        <input id="siteSearch" class="search-input" type="search" placeholder="搜片名/类型" autocomplete="off">
+        <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+      </div>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="hero-grid">
+    <div>
+      <span class="hero-eyebrow">片单分类 · 播放体验</span>
+      <h1>花都影视在线观看</h1>
+      <p class="hero-lead">按都市、悬疑、年代、动画等具体类型拆分片单，标注清晰度、更新频率与设备适配。11月8日批次的<b>6 部都市剧</b>已全部补齐 1080P，字幕与音轨信息逐条核对。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#picks">查看精选片单</a>
+        <a class="btn btn-ghost" href="/#guide">先看体验指南</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>42</b>本批次整理条目</div>
+        <div><b>9</b>类型频道</div>
+        <div><b>11月8日</b>数据核对日</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 440 360" role="img">
+        <defs>
+          <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2f6f6b"/><stop offset="1" stop-color="#1b2440"/>
+          </linearGradient>
+          <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e8b04b"/><stop offset="1" stop-color="#c98a2b"/>
+          </linearGradient>
+        </defs>
+        <rect x="26" y="30" width="330" height="220" rx="14" fill="url(#scr)"/>
+        <rect x="26" y="30" width="330" height="220" rx="14" fill="none" stroke="#0f1628" stroke-width="3"/>
+        <rect x="48" y="52" width="286" height="150" rx="6" fill="#0f1628" opacity=".55"/>
+        <g fill="#e8b04b" opacity=".92">
+          <rect x="62" y="70" width="88" height="9" rx="4"/>
+          <rect x="62" y="90" width="132" height="7" rx="3" opacity=".7"/>
+          <rect x="62" y="106" width="110" height="7" rx="3" opacity=".55"/>
+          <rect x="62" y="132" width="72" height="7" rx="3" opacity=".45"/>
+        </g>
+        <circle cx="300" cy="96" r="20" fill="url(#gold)"/>
+        <path d="M294 87v18l15-9z" fill="#1b2440"/>
+        <g fill="#f2e2c4">
+          <rect x="62" y="158" width="60" height="28" rx="5"/>
+          <rect x="132" y="158" width="60" height="28" rx="5"/>
+          <rect x="202" y="158" width="60" height="28" rx="5"/>
+        </g>
+        <rect x="44" y="252" width="120" height="14" rx="6" fill="#c9c2b2"/>
+        <rect x="176" y="252" width="60" height="14" rx="6" fill="#dcd8cf"/>
+        <rect x="248" y="252" width="96" height="14" rx="6" fill="#dcd8cf"/>
+        <g transform="translate(262,232)">
+          <rect x="0" y="0" width="124" height="76" rx="10" fill="#fff"/>
+          <rect x="0" y="0" width="124" height="20" rx="10" fill="#e8b04b"/>
+          <rect x="10" y="30" width="70" height="7" rx="3" fill="#c9c2b2"/>
+          <rect x="10" y="44" width="96" height="7" rx="3" fill="#dcd8cf"/>
+          <rect x="10" y="58" width="52" height="7" rx="3" fill="#dcd8cf"/>
+        </g>
+        <path d="M26 300h330" stroke="#dcd8cf" stroke-width="2"/>
+        <g fill="#2f6f6b" opacity=".75">
+          <circle cx="60" cy="318" r="6"/><circle cx="90" cy="318" r="6"/><circle cx="120" cy="318" r="6"/>
+        </g>
+        <rect x="160" y="312" width="196" height="12" rx="6" fill="#e8b04b" opacity=".5"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+  <main>
+    <section class="block" id="overview">
+      <div class="block-head">
+        <h2>领域概览：一次分清片单里的四类内容</h2>
+        <span class="more">核对日期 11月8日</span>
+      </div>
+      <div class="overview">
+        <article class="card ov-item">
+          <h3>正剧片单</h3>
+          <p>单集 40—52 分钟，按集数完整上线。都市剧《合租第七年》24 集，已完结；年代剧《北码头 1978》32 集，11月6日更新至第 19 集。</p>
+          <span>看集数与完播状态</span>
+        </article>
+        <article class="card ov-item">
+          <h3>短番与动画剧场</h3>
+          <p>国产动画《雨巷奇谭》周更，单集 22 分钟；竖屏短番单集 8—12 分钟，适合通勤缓存，试播与总集篇不计入正片进度。</p>
+          <span>看单集时长与更新日</span>
+        </article>
+        <article class="card ov-item">
+          <h3>试播与花絮</h3>
+          <p>试播集多在正式上线前 7 天放出，《南岸写字楼》试播版第 1 集 11月1日发布，正片 11月8日上线，画面做过二次调色。</p>
+          <span>留意“试播”标识</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="picks">
+      <div class="block-head">
+        <h2>精选内容推荐：六个可先看的具体条目</h2>
+        <span class="more">按观看完成度排序</span>
+      </div>
+      <div class="pick-grid">
+        <article class="card pick">
+          <img src="https://picsum.photos/seed/huadu-office/640/400" width="640" height="400" loading="lazy" alt="都市剧办公场景剧照，落地窗与长桌">
+          <div class="pick-body">
+            <h3>《南岸写字楼》都市职场剧</h3>
+            <p>24 集，11月8日上线前 6 集。台词密度高，前两集铺了 5 条人物线，适合连看三集再判断节奏。</p>
+            <div class="tag-row"><span class="tag">都市职场剧</span><span class="tag t2">1080P</span><span class="tag t3">字幕可关</span></div>
+          </div>
+        </article>
+        <article class="card pick">
+          <img src="https://picsum.photos/seed/huadu-mist/640/400" width="640" height="400" loading="lazy" alt="悬疑剧雨夜巷口街灯与湿润地面">
+          <div class="pick-body">
+            <h3>《雾港回声》悬疑剧</h3>
+            <p>16 集，单集 45 分钟。第 4 集起埋时间线错位，弹幕集中在 27 分钟处，开无剧透模式观感更整。</p>
+            <div class="tag-row"><span class="tag">悬疑推理剧</span><span class="tag t2">4K 可选</span><span class="tag t3">无剧透模式</span></div>
+          </div>
+        </article>
+        <article class="card pick">
+          <img src="https://picsum.photos/seed/huadu-dock/640/400" width="640" height="400" loading="lazy" alt="年代剧码头场景，旧货轮与麻袋">
+          <div class="pick-body">
+            <h3>《北码头 1978》年代剧</h3>
+            <p>32 集，11月6日更新至第 19 集。方言对白配双行注释字幕，1950—1970 年代背景名词有 31 条注释。</p>
+            <div class="tag-row"><span class="tag">年代情感剧</span><span class="tag t2">双行字幕</span><span class="tag t3">周更 2 集</span></div>
+          </div>
+        </article>
+        <article class="card pick">
+          <img src="https://picsum.photos/seed/huadu-rainlane/640/400" width="640" height="400" loading="lazy" alt="动画剧场景，雨巷与纸伞造型角色">
+          <div class="pick-body">
+            <h3>《雨巷奇谭》国产动画</h3>
+            <p>周更，单集 22 分钟，11月7日更新第 9 集。手绘线条配水墨背景，横屏与竖屏各有一版构图。</p>
+            <div class="tag-row"><span class="tag">国产动画</span><span class="tag t2">周更</span><span class="tag t3">手绘风</span></div>
+          </div>
+        </article>
+        <article class="card pick">
+          <img src="https://picsum.photos/seed/huadu-flat/640/400" width="640" height="400" loading="lazy" alt="合租题材剧照，客厅沙发与堆叠纸箱">
+          <div class="pick-body">
+            <h3>《合租第七年》生活轻喜剧</h3>
+            <p>24 集已完结，单集 43 分钟。三段式结构，适合下班后一集一餐，11月8日补齐 1080P 片源。</p>
+            <div class="tag-row"><span class="tag">生活轻喜剧</span><span class="tag t2">已完结</span><span class="tag t3">1080P</span></div>
+          </div>
+        </article>
+        <article class="card pick">
+          <img src="https://picsum.photos/seed/huadu-city/640/400" width="640" height="400" loading="lazy" alt="城市夜景航拍，楼宇灯光与江面">
+          <div class="pick-body">
+            <h3>《夜行花都》城市纪录片</h3>
+            <p>8 集，单集 30 分钟，11月4日更新第 5 集。按街区拆分，每集记录 3 个夜间职业，采访原声保留方言。</p>
+            <div class="tag-row"><span class="tag">城市纪录片</span><span class="tag t2">8 集</span><span class="tag t3">原声方言</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="latest">
+      <div class="block-head">
+        <h2>最新更新：本周片单变动与片源修复</h2>
+        <span class="more">时间截至 11月8日 12:00</span>
+      </div>
+      <ul class="update-list card" style="padding:6px 16px">
+        <li><time datetime="2026-11-08">今天 09:40</time><span class="t">《南岸写字楼》<small>正片前 6 集上线，都市剧频道置顶</small></span><span class="meta">1080P · 24集</span></li>
+        <li><time datetime="2026-11-08">今天 08:15</time><span class="t">《合租第七年》<small>第 13、14 集 1080P 片源替换，修复上一版的音画错位</small></span><span class="meta">片源修复</span></li>
+        <li><time datetime="2026-11-07">昨天 21:10</time><span class="t">《雨巷奇谭》<small>第 9 集上线，新增竖屏构图版本</small></span><span class="meta">周更</span></li>
+        <li><time datetime="2026-11-06">11月6日</time><span class="t">《北码头 1978》<small>更新至第 19 集，注释字幕补到第 31 条</small></span><span class="meta">周更 2 集</span></li>
+        <li><time datetime="2026-11-05">11月5日</time><span class="t">《雾港回声》<small>第 4 集 27 分钟处剪辑点微调，时长变更为 45:12</small></span><span class="meta">版本变更</span></li>
+        <li><time datetime="2026-11-04">11月4日</time><span class="t">《夜行花都》<small>第 5 集上线，第 3 集补录 4 分钟采访原声</small></span><span class="meta">纪录片</span></li>
+        <li><time datetime="2026-11-02">11月2日</time><span class="t">《雾港回声》<small>试播集下线，正片第 1 集替换为最终调色版</small></span><span class="meta">试播转正片</span></li>
+      </ul>
+    </section>
+
+    <section class="block" id="category">
+      <div class="block-head">
+        <h2>分类入口：九个按搜索习惯拆分的类型</h2>
+        <span class="more">共 42 条在架条目</span>
+      </div>
+      <div class="cat-grid">
+        <a class="cat" href="/#picks"><b>都市职场剧</b><span>9 部 · 单集 40 分钟以上</span></a>
+        <a class="cat" href="/#picks"><b>悬疑推理剧</b><span>7 部 · 含无剧透模式</span></a>
+        <a class="cat" href="/#picks"><b>年代情感剧</b><span>6 部 · 方言注释字幕</span></a>
+        <a class="cat" href="/#picks"><b>国产动画</b><span>5 部 · 周更为主</span></a>
+        <a class="cat" href="/#picks"><b>生活轻喜剧</b><span>5 部 · 多已完结</span></a>
+        <a class="cat" href="/#picks"><b>城市纪录片</b><span>4 部 · 原声采访</span></a>
+        <a class="cat" href="/#picks"><b>竖屏短番</b><span>3 部 · 单集 8—12 分钟</span></a>
+        <a class="cat" href="/#picks"><b>家庭伦理剧</b><span>2 部 · 长集数</span></a>
+        <a class="cat" href="/#picks"><b>科幻设定剧</b><span>1 部 · 视效笔记</span></a>
+      </div>
+      <p class="fact-note" style="margin-top:12px">分类按用户实际搜索词收敛，未设“热门”“推荐”这类泛标签；每个类型都能对应到具体条目名。</p>
+    </section>
+
+    <section class="block card article" id="deep">
+      <div class="kicker">深度解析</div>
+      <h2>都市剧真的“越短越好追”吗：三个可核对的判断</h2>
+      <p class="dek">把“集数、单集时长、更新节奏”三项拆开看，会得到和直觉不太一样的结论；下面每个判断都附了可直接对照的条目与时间。</p>
+
+      <h3>判断一：单集 45 分钟是都市剧的舒适区，低于 30 分钟反而更考验编剧</h3>
+      <p>《南岸写字楼》单集 45 分 30 秒，前 3 集共铺垫 5 条人物线，平均每条线得到约 27 分钟戏份；《合租第七年》单集 43 分钟，主线只 2 条，节奏被观众评价为“更顺”。两者时长接近，但信息密度差一倍。反过来，竖屏短番《楼下便利店》单集 10 分钟，一集只能推进 1 个事件，连看 6 集才等于一集都市剧的信息量。平台把它归入“短番”而不是“都市剧”，分类逻辑是对的。</p>
+      <div class="check-panel">
+        <div><dt>条目</dt><dd>《南岸写字楼》</dd></div>
+        <div><dt>单集时长</dt><dd>45:30</dd></div>
+        <div><dt>前 3 集人物线</dt><dd>5 条</dd></div>
+      </div>
+
+      <h3>判断二：更新节奏比总集数更能决定弃剧率</h3>
+      <p>11月8日上线的《南岸写字楼》一次放出 6 集，之后转为每周三、周六各 2 集；《北码头 1978》从 10月10日开播起固定周更 2 集，到 11月6日累计 19 集。两种排播的差异在弹幕里很直观：前者第 1 集弹幕峰值出现在第 12 分钟，后者峰值出现在第 38 分钟。一次性放出更多集数，会让观众把注意力前移，进入剧情更早；周更则让单集的讨论集中在后半段。总集数 24 与 32 的差别，反而没有排播方式影响大。</p>
+      <div class="quote"><b>可核对的说法：</b>把同一部剧的“试播版”和“正片第 1 集”并排看，<b>《雾港回声》</b>试播版 11月2日下线，正片 11月1日上线，两版在第 18 分钟处的镜头角度不同；这是版本差异，不是剧情改动。</div>
+
+      <h3>判断三：字幕策略正在成为类型标识，而不只是无障碍功能</h3>
+      <p>年代剧《北码头 1978》用双行字幕解释方言与旧称，注释累计 31 条；悬疑剧《雾港回声》则提供可关闭的“无剧透模式”，开启后字幕不提前透露线索词。两种做法服务的目标相反：一个增加信息，一个抑制信息。把字幕当成类型工具后，同一部剧在不同模式下的完播率会出现差异，这也是 11月8日批次里唯一被要求做 AB 测试的功能项。需要说明的是，AB 测试的样本与结论尚未公开，目前只能确认功能上线，不能推断效果。</p>
+
+      <div class="twocol">
+        <p>再补一个成本视角。都市剧《合租第七年》24 集，如果按每晚两集、每集 43 分钟计算，约 12 天看完，合计 17.2 小时；年代剧 32 集按每周 2 集排播，追完需要 16 周。前者适合短期集中观看，后者适合长线陪伴。选片单之前先算这笔时间账，比看评分更实际。</p>
+        <p>需要保留的怀疑是：片单标注的清晰度是否等于实际码率。11月8日的核对里，6 部都市剧有 4 部标 1080P，实测码率在 4.2—5.8Mbps 之间浮动；标 4K 的《雾港回声》在移动网络下会自动降到 1080P。清晰度标识应理解为“最高可选”，而非“始终保持”。</p>
+      </div>
+      <p class="fact-note">以上判断基于 11月1日至11月8日的条目信息与播放记录，样本有限，欢迎用具体条目反驳。</p>
+    </section>
+
+    <section class="block" id="guide">
+      <div class="block-head">
+        <h2>体验指南：从选片到看完的五步</h2>
+        <span class="more">手机与电视端通用</span>
+      </div>
+      <ol class="steps">
+        <li><div><h3>先按单集时长筛，不按评分筛</h3><p>通勤时段选 8—12 分钟竖屏短番；整块时间选 43—52 分钟正剧。片单页已标注时长，避免点进去才发现一集 50 分钟。</p></div></li>
+        <li><div><h3>确认更新状态再决定是否追更</h3><p>已完结条目可直接连看；周更条目注意更新时间，《北码头 1978》固定在周三、周六，错过一天不影响进度。</p></div></li>
+        <li><div><h3>打开字幕设置，按类型切换</h3><p>年代剧开双行注释；悬疑剧开无剧透模式。字幕开关在播放器右下角，设置会记住上次选择。</p></div></li>
+        <li><div><h3>移动网络先缓存前两集</h3><p>1080P 单集约 350—520MB，缓存两集足够一次通勤。4K 片源建议在 Wi-Fi 下观看，实测需 18—24Mbps。</p></div></li>
+        <li><div><h3>多设备登录注意并发上限</h3><p>同一账号最多同时在线 3 台设备，电视端与手机端共享额度；超出后最早登录的设备退出播放，续看进度保留。</p></div></li>
+      </ol>
+    </section>
+
+    <section class="block" id="faq">
+      <div class="block-head">
+        <h2>常见问题：类型、清晰度与账号</h2>
+        <span class="more">6 个高频问题</span>
+      </div>
+      <details class="faq">
+        <summary>都市剧片单适合哪个时段追？</summary>
+        <div class="ans">都市剧单集 48 分钟左右，按每晚两集计算，一部 24 集剧约 12 天看完。11月更新批次里《南岸写字楼》与《合租第七年》节奏接近，适合按周追。</div>
+      </details>
+      <details class="faq">
+        <summary>高清播放需要多少带宽？</summary>
+        <div class="ans">1080P 稳定播放实测占用 4—6Mbps，4K 需 18—24Mbps。移动网络建议先缓存前两集再通勤观看。</div>
+      </details>
+      <details class="faq">
+        <summary>年代剧与悬疑剧的字幕有什么区别？</summary>
+        <div class="ans">年代剧多为方言对白，标配双行注释字幕；悬疑剧字幕不提前透露线索，部分剧集提供“无剧透模式”选择项。</div>
+      </details>
+      <details class="faq">
+        <summary>账号在多设备登录会互相踢下线吗？</summary>
+        <div class="ans">同一账号最多同时在线 3 台设备，电视端与手机端共享额度，超出后最早登录的设备会退出播放。</div>
+      </details>
+      <details class="faq">
+        <summary>为什么有的片单标注“试播”而不是正片？</summary>
+        <div class="ans">试播集通常在正式上线前 7 天放出，用于观察弹幕反馈与完播率，画面与音轨可能做二次调整。</div>
+      </details>
+      <details class="faq">
+        <summary>动画剧场的更新节奏是怎样的？</summary>
+        <div class="ans">国产动画剧场多为周更，单集 22—24 分钟；竖屏短番单集 8—12 分钟，试播与总集篇不计入正片进度。</div>
+      </details>
+    </section>
+
+    <section class="block" id="comments">
+      <div class="block-head">
+        <h2>用户评论：来自具体条目的追看反馈</h2>
+        <span class="more">11月6日—11月8日</span>
+      </div>
+      <div class="comment-grid">
+        <article class="comment">
+          <header>
+            <span class="avatar" style="background:#2f6f6b">周</span>
+            <span class="who">周野 · 追剧 9 年</span>
+            <span class="when">11月8日</span>
+          </header>
+          <p>《南岸写字楼》前两集信息量确实大，第三集开始收线才顺。冲着“都市职场”来的，结果一半戏在会议室，倒也不算骗人。</p>
+          <span class="ref">指向：《南岸写字楼》前 3 集</span>
+        </article>
+        <article class="comment">
+          <header>
+            <span class="avatar" style="background:#a4432f">林</span>
+            <span class="who">林小满</span>
+            <span class="when">11月7日</span>
+          </header>
+          <p>《北码头 1978》的双行字幕好用，旧称不用暂停查。就是周更 2 集太磨人，追到第 19 集开始等回看。</p>
+          <span class="ref">指向：《北码头 1978》第 19 集</span>
+        </article>
+        <article class="comment">
+          <header>
+            <span class="avatar" style="background:#66708a">陈</span>
+            <span class="who">陈默 · 通勤党</span>
+            <span class="when">11月7日</span>
+          </header>
+          <p>竖屏短番缓存两集只要 5 分钟，比正剧省事。缺点是 10 分钟一集，看到关键处就断在广告位，情绪很难续上。</p>
+          <span class="ref">指向：竖屏短番《楼下便利店》</span>
+        </article>
+        <article class="comment">
+          <header>
+            <span class="avatar" style="background:#c98a2b">阿</span>
+            <span class="who">阿柯</span>
+            <span class="when">11月6日</span>
+          </header>
+          <p>《雾港回声》第 4 集 27 分钟那个剪辑点改过，前一版时长 45:41，现在 45:12。我对比了两遍，镜头角度确实不一样。</p>
+          <span class="ref">指向：《雾港回声》第 4 集版本</span>
+        </article>
+        <article class="comment">
+          <header>
+            <span class="avatar" style="background:#4a5268">吴</span>
+            <span class="who">吴岸</span>
+            <span class="when">11月6日</span>
+          </header>
+          <p>说句不好听的，标 4K 的片子手机端都会降，片单页把“最高可选”写清楚比标 4K 有用多了。这次提示改得还行。</p>
+          <span class="ref">指向：清晰度标识说明</span>
+        </article>
+        <article class="comment">
+          <header>
+            <span class="avatar" style="background:#2f6f6b">唐</span>
+            <span class="who">唐一苇</span>
+            <span class="when">11月6日</span>
+          </header>
+          <p>《夜行花都》第 3 集补录的 4 分钟采访原声很值，讲凌晨四点的早市那段，比航拍镜头有用。</p>
+          <span class="ref">指向：《夜行花都》第 3 集</span>
+        </article>
+      </div>
+      <p class="fact-note" style="margin-top:12px">评论按条目归类，未做精选，也不代表平台立场。</p>
+    </section>
+
+    <section class="block" id="news">
+      <div class="block-head">
+        <h2>相关资讯：排播、版本与设备适配</h2>
+        <span class="more">四条可核对记录</span>
+      </div>
+      <div class="news-grid">
+        <article class="card news">
+          <time datetime="2026-11-08">11月8日</time>
+          <h3>都市剧频道本周新增 6 部，3 部带试播记录</h3>
+          <p>其中《南岸写字楼》试播版 11月1日上线、正片 11月8日上线，试播版画面偏冷，正片调色后偏暖，属于版本差异。</p>
+        </article>
+        <article class="card news">
+          <time datetime="2026-11-07">11月7日</time>
+          <h3>电视端遥控器焦点顺序调整</h3>
+          <p>片单页与播放页的焦点顺序改为“封面—集数—字幕—清晰度”，减少误按退出；改动自 11月7日 20:00 生效。</p>
+        </article>
+        <article class="card news">
+          <time datetime="2026-11-05">11月5日</time>
+          <h3>悬疑剧无剧透模式扩展到全部 7 部</h3>
+          <p>开启后字幕屏蔽 14 组线索词，弹幕关键词同步过滤；《雾港回声》为默认开启，其他条目需手动打开。</p>
+        </article>
+        <article class="card news">
+          <time datetime="2026-11-03">11月3日</time>
+          <h3>年代剧注释字幕增补 11 条旧地名</h3>
+          <p>《北码头 1978》本轮增补集中在第 12—19 集，注释总数由 20 条升至 31 条，地名与职务称呼各占一半。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="rank">
+      <div class="block-head">
+        <h2>口碑榜：按完播率与条目反馈排</h2>
+        <span class="more">11月8日 12:00 统计</span>
+      </div>
+      <ol class="rank-list card" style="padding:4px 16px">
+        <li><span class="t reft" style="display:contents"><span class="rt">《合租第七年》</span><br></span><span class="rs">已完结 · 24 集</span><span class="rv">完播 71%</span></li>
+        <li><span class="rt">《北码头 1978》</span><span class="rs">周更 · 更新至 19 集</span><span class="rv">完播 64%</span></li>
+        <li><span class="rt">《雾港回声》</span><span class="rs">16 集 · 无剧透模式</span><span class="rv">完播 58%</span></li>
+        <li><span class="rt">《雨巷奇谭》</span><span class="rs">周更 · 第 9 集</span><span class="rv">完播 52%</span></li>
+        <li><span class="rt">《夜行花都》</span><span class="rs">8 集 · 第 5 集</span><span class="rv">完播 47%</span></li>
+        <li><span class="rt">《南岸写字楼》</span><span class="rs">前 6 集上线首日</span><span class="rv">完播 41%</span></li>
+      </ol>
+      <p class="fact-note" style="margin-top:10px">完播率统计口径为“单集播放至 90% 以上”，新上线条目样本量偏小，排名仅供参考。</p>
+    </section>
+
+    <section class="block" id="tags">
+      <div class="block-head">
+        <h2>相关推荐：按你能搜到的词找</h2>
+        <span class="more">长尾标签索引</span>
+      </div>
+      <div class="tag-index">
+        <a href="/#picks">都市职场剧推荐</a>
+        <a href="/#picks">24集完结生活轻喜剧</a>
+        <a href="/#picks">悬疑剧无剧透模式</a>
+        <a href="/#picks">年代剧方言注释字幕</a>
+        <a href="/#picks">国产动画周更时间表</a>
+        <a href="/#picks">城市纪录片原声采访</a>
+        <a href="/#picks">竖屏短番通勤缓存</a>
+        <a href="/#guide">1080P 与 4K 码率区别</a>
+        <a href="/#latest">11月片源修复记录</a>
+        <a href="/#news">电视端遥控器焦点顺序</a>
+        <a href="/#rank">都市剧完播率排行</a>
+        <a href="/#faq">多设备同时登录上限</a>
+      </div>
+    </section>
+  </main>
+
+  <aside class="sidebar" aria-label="侧栏导航与信息">
+    <div class="side-card">
+      <h2>栏目导航</h2>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选内容推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#category">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rank">口碑榜</a></li>
+        <li><a href="/#tags">相关推荐</a></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <h2>本批次核对</h2>
+      <p>核对日：11月8日</p>
+      <p>在架条目 42 条，其中 1080P 片源 38 条，4K 可选 4 条。</p>
+      <p>片源修复 3 项，字幕更新 2 项，试播转正片 1 项。</p>
+    </div>
+    <div class="side-card">
+      <h2>类型速查</h2>
+      <div class="side-tags">
+        <a href="/#picks">都市职场</a>
+        <a href="/#picks">悬疑推理</a>
+        <a href="/#picks">年代情感</a>
+        <a href="/#picks">国产动画</a>
+        <a href="/#picks">生活轻喜剧</a>
+        <a href="/#picks">城市纪录片</a>
+        <a href="/#picks">竖屏短番</a>
+        <a href="/#picks">家庭伦理</a>
+        <a href="/#picks">科幻设定</a>
+      </div>
+    </div>
+    <div class="side-card">
+      <h2>观看提醒</h2>
+      <p>标 4K 的条目在移动网络下会自动降到 1080P，属正常适配。</p>
+      <p>周更剧集建议开更新提醒，避免漏集后补看打乱节奏。</p>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <rect width="48" height="48" rx="11" fill="#2c3a5c"/>
+          <path d="M13 15h22v5H13zm0 9h22v5H13zm0 9h14v5H13z" fill="#e8b04b"/>
+          <circle cx="36" cy="34" r="6" fill="#e8b04b"/>
+          <path d="M34 31.2v5.6l5-2.8z" fill="#2c3a5c"/>
+        </svg>
+        <b>花都影视在线观看</b>
+      </div>
+      <p class="footer-desc">把片单拆到可核对的单集时长、清晰度与更新节奏，选片前先算时间账。</p>
+      <p class="footer-desc" style="font-size:.78rem">页面数据为示例条目，用于说明分类与播放体验的整理方式。</p>
+    </div>
+    <div class="footer-col">
+      <h3>片单</h3>
+      <ul>
+        <li><a href="/#picks">都市职场剧</a></li>
+        <li><a href="/#picks">悬疑推理剧</a></li>
+        <li><a href="/#picks">年代情感剧</a></li>
+        <li><a href="/#picks">国产动画</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>使用</h3>
+      <ul>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#rank">口碑榜</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>互动</h3>
+      <ul>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#tags">相关推荐</a></li>
+        <li><a href="/#overview">领域概览</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>更新核对：11月8日 · 对应正文「最新更新」「相关资讯」条目</span>
+    <span>© 2026 示例站点 · 条目均为演示数据</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.textContent = open ? '收起' : '菜单';
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 900){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent = '菜单';
+      }
+    });
+  }
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+  var sections = links.map(function(a){
+    var id = a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function highlight(){
+    var offset = (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--notice-h')) || 40)
+      + (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--head-h')) || 56) + 40;
+    var current = null;
+    sections.forEach(function(sec){
+      if(sec.getBoundingClientRect().top - offset <= 0) current = sec.id;
+    });
+    links.forEach(function(a){
+      var on = a.getAttribute('href') === '/#' + current;
+      a.classList.toggle('active', on);
+      if(on){ a.setAttribute('aria-current','true'); } else { a.removeAttribute('aria-current'); }
+    });
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){ highlight(); ticking = false; });
+      ticking = true;
+    }
+  }, {passive:true});
+  highlight();
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var input = document.getElementById('siteSearch');
+  var feedback = document.getElementById('searchFeedback');
+  var index = [];
+  document.querySelectorAll('main h2, main h3, .update-list .t, .comment p, .news h3, .tag-index a, .cat b').forEach(function(el){
+    var text = (el.textContent || '').trim();
+    if(text){ index.push(text); }
+  });
+  function esc(s){ return s.replace(/[&<>"]/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+  if(input && feedback){
+    input.addEventListener('input', function(){
+      var q = input.value.trim();
+      if(!q){ feedback.classList.remove('show'); feedback.innerHTML=''; return; }
+      var hits = index.filter(function(t){ return t.indexOf(q) !== -1; }).slice(0,4);
+      feedback.classList.add('show');
+      if(hits.length){
+        feedback.innerHTML = '找到 <strong>' + hits.length + '</strong> 处相关：<br>' + hits.map(function(h){ return '· ' + esc(h); }).join('<br>');
+      } else {
+        feedback.innerHTML = '没有找到与“<strong>' + esc(q) + '</strong>”相关的条目，可换个类型词试试，比如“都市”“字幕”“1080P”。';
+      }
+    });
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ input.value=''; feedback.classList.remove('show'); }
+    });
+  }
+})();
+</script>
+</body>
+          </html>
