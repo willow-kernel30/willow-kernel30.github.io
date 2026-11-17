@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>麻豆不打烊-深夜片单与观影指南</title>
+<meta name="description" content="麻豆不打烊聚焦深夜观影片单、创作者动态与观看体验，整理本周上线条目、类型分类入口、深度解析与用户评论，帮助你在信息过载的时段里筛出真正值得点开的一部。">
+<meta name="keywords" content="麻豆不打烊">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1630'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ff6b6b' stroke-width='4'/%3E%3Cpolygon points='28,24 44,32 28,40' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#12101c;
+  --bg-soft:#1a1728;
+  --panel:#201c33;
+  --panel-2:#272142;
+  --line:#352e50;
+  --text:#ece9f5;
+  --muted:#a49cc2;
+  --accent:#ff6b6b;
+  --accent-2:#ffd166;
+  --accent-3:#6bc9ff;
+  --ok:#6ee7a8;
+  --warn:#ffb26b;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+  --gap:18px;
+  --font: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation:none!important;transition:none!important;}
+}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  font-size:15.5px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent-3);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 10px;}
+p{margin:0 0 12px;}
+ul,ol{margin:0 0 12px;padding-left:20px;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px;}
+:focus-visible{outline:3px solid var(--accent-2);outline-offset:2px;}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#1a1020;padding:8px 14px;z-index:999;}
+.skip:focus{left:12px;top:8px;}
+/* 吸顶组 */
+.stickgroup{
+  position:sticky;top:0;z-index:80;
+}
+.notice{
+  background:linear-gradient(90deg,#3a2140,#2a1c3a);
+  border-bottom:1px solid var(--line);
+  font-size:13.5px;
+  color:var(--muted);
+}
+.notice .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-top:6px;padding-bottom:6px;}
+.notice b{color:var(--accent-2);font-weight:600;}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 3px rgba(255,107,107,.18);}
+header.site{
+  background:rgba(18,16,28,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.hd{display:flex;align-items:center;gap:14px;padding:10px 0;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;}
+.brand:hover{text-decoration:none;}
+.brand .logo-mark{flex:none;width:40px;height:40px;}
+.brand .name{font-size:20px;font-weight:700;letter-spacing:.5px;}
+.brand .name em{color:var(--accent);font-style:normal;}
+.mainnav{margin-left:auto;display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+.mainnav a{
+  color:var(--muted);font-size:14px;padding:6px 10px;border-radius:var(--radius-sm);
+}
+.mainnav a:hover,.mainnav a.active{color:var(--text);background:var(--panel-2);text-decoration:none;}
+.hd-tools{display:flex;align-items:center;gap:8px;}
+.searchbox{display:flex;align-items:center;border:1px solid var(--line);background:var(--bg-soft);border-radius:999px;padding:4px 4px 4px 12px;}
+.searchbox input{
+  background:transparent;border:none;color:var(--text);font-size:14px;width:150px;padding:4px;font-family:inherit;
+}
+.searchbox input::placeholder{color:#6f6790;}
+.searchbox button{
+  background:var(--accent);color:#1b0f18;border:none;border-radius:999px;padding:5px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;font-weight:600;
+}
+.searchbox button:hover{background:#ff8585;}
+.menubtn{
+  display:none;background:var(--panel-2);border:1px solid var(--line);color:var(--text);border-radius:var(--radius-sm);
+  padding:6px 12px;font-size:14px;cursor:pointer;font-family:inherit;align-items:center;gap:6px;
+}
+.search-msg{
+  display:none;font-size:13.5px;color:var(--accent-2);background:var(--panel);border:1px dashed var(--line);
+  border-radius:var(--radius-sm);padding:8px 12px;margin:0 0 16px;
+}
+.search-msg.show{display:block;}
+/* 锚点偏移 */
+section[id],div[id].anchor{scroll-margin-top:118px;}
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 78% -10%,rgba(255,107,107,.22),transparent 60%),
+    radial-gradient(700px 380px at 12% 10%,rgba(107,201,255,.14),transparent 60%),
+    var(--bg-soft);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center;padding:52px 0 46px;}
+.hero .kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--accent-2);
+  border:1px solid var(--line);border-radius:999px;padding:3px 12px;background:rgba(255,209,102,.07);margin-bottom:16px;
+}
+.hero h1{font-size:clamp(30px,4.6vw,46px);letter-spacing:1px;margin-bottom:14px;}
+.hero h1 span{color:var(--accent);}
+.hero .lede{font-size:16.5px;color:#cfc7e6;max-width:34em;}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600;border:1px solid transparent;
+  transition:transform .15s ease,background .15s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);}
+.btn-primary{background:var(--accent);color:#1b0f18;}
+.btn-primary:hover{background:#ff8585;}
+.btn-ghost{border-color:var(--line);color:var(--text);background:var(--panel);}
+.btn-ghost:hover{background:var(--panel-2);}
+.hero-stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap;}
+.hero-stats .n{font-size:24px;font-weight:700;color:var(--accent-2);}
+.hero-stats .l{font-size:12.5px;color:var(--muted);}
+.hero-art{position:relative;height:300px;}
+.hero-art svg{width:100%;height:100%;}
+/* 通用板块 */
+main{padding:8px 0 40px;}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:var(--gap);
+  box-shadow:var(--shadow);
+}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px;}
+.sec-head h2{font-size:21px;margin:0;}
+.sec-head .sub{font-size:13px;color:var(--muted);}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);}
+.span2{grid-column:span 2;}
+.card{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px;
+  transition:transform .15s ease,border-color .15s ease;
+}
+.card:hover{transform:translateY(-3px);border-color:#4a3f70;}
+.card h3{font-size:16px;margin-bottom:8px;}
+.card p{font-size:14px;color:#c6bede;margin-bottom:8px;}
+.meta{font-size:12.5px;color:var(--muted);}
+.tag{
+  display:inline-block;font-size:12px;color:var(--accent-3);border:1px solid #355070;background:rgba(107,201,255,.08);
+  border-radius:999px;padding:1px 9px;margin:2px 6px 2px 0;
+}
+.tag:hover{text-decoration:none;background:rgba(107,201,255,.2);}
+.tag.alt{color:var(--accent-2);border-color:#5a4a2a;background:rgba(255,209,102,.08);}
+.tag.alt:hover{background:rgba(255,209,102,.2);}
+.tag.rose{color:var(--accent);border-color:#5c3038;background:rgba(255,107,107,.08);}
+.tag.rose:hover{background:rgba(255,107,107,.2);}
+.list-tight{list-style:none;padding:0;margin:0;}
+.list-tight li{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px;}
+.list-tight li:last-child{border-bottom:none;}
+.list-tight .date{flex:none;color:var(--accent-2);font-variant-numeric:tabular-nums;font-size:13px;min-width:56px;}
+.list-tight .txt{color:#d6d0e8;}
+.list-tight .txt b{color:var(--text);}
+/* 分类入口 */
+.catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.cat{
+  display:block;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px;
+  color:var(--text);
+}
+.cat:hover{text-decoration:none;border-color:var(--accent);transform:translateY(-2px);transition:.15s;}
+.cat b{display:block;font-size:15px;margin-bottom:4px;}
+.cat span{font-size:12.5px;color:var(--muted);}
+/* 深度解析 */
+.article p{color:#d3cde6;}
+.article h3{font-size:17.5px;color:var(--accent-2);margin-top:22px;}
+.article blockquote{
+  margin:18px 0;padding:14px 18px;border-left:3px solid var(--accent);background:var(--bg-soft);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-style:normal;color:#e5dff5;
+}
+.article blockquote cite{display:block;font-size:12.5px;color:var(--muted);margin-top:6px;font-style:normal;}
+.checktable{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 18px;}
+.checktable th,.checktable td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+.checktable th{background:var(--panel-2);color:var(--accent-2);font-weight:600;white-space:nowrap;}
+.checktable td{color:#cfc7e6;}
+/* 步骤 */
+.steps{counter-reset:step;list-style:none;padding:0;margin:0;display:grid;gap:12px;}
+.steps li{
+  counter-increment:step;position:relative;padding:12px 14px 12px 50px;background:var(--bg-soft);
+  border:1px solid var(--line);border-radius:var(--radius-sm);font-size:14.5px;
+}
+.steps li::before{
+  content:counter(step);position:absolute;left:12px;top:12px;width:26px;height:26px;border-radius:50%;
+  background:var(--accent);color:#1b0f18;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;
+}
+.steps li b{color:var(--text);}
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;}
+.compare .col{padding:16px;background:var(--bg-soft);}
+.compare .col:first-child{border-right:1px solid var(--line);}
+.compare h4{font-size:14.5px;margin-bottom:10px;color:var(--accent-3);}
+.compare .col:last-child h4{color:var(--warn);}
+.compare ul{padding-left:18px;margin:0;font-size:13.8px;color:#c6bede;}
+/* FAQ */
+details{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);padding:0;margin-bottom:10px;overflow:hidden;
+}
+details[open]{border-color:#4a3f70;}
+summary{
+  cursor:pointer;padding:13px 16px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:flex-start;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";color:var(--accent);font-size:18px;line-height:1;flex:none;}
+details[open] summary::after{content:"–";}
+details .ans{padding:0 16px 14px;font-size:14.2px;color:#c9c2e0;}
+/* 评论 */
+.comment{border-bottom:1px dashed var(--line);padding:12px 0;font-size:14.2px;}
+.comment:last-child{border-bottom:none;}
+.comment .who{font-size:13px;color:var(--accent-2);margin-bottom:3px;}
+.comment .who span{color:var(--muted);margin-left:8px;font-weight:400;}
+.comment p{margin:0;color:#cfc8e6;}
+/* 榜单 */
+.rank{list-style:none;padding:0;margin:0;counter-reset:r;}
+.rank li{display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed var(--line);}
+.rank li:last-child{border-bottom:none;}
+.rank .no{
+  flex:none;width:28px;height:28px;border-radius:8px;background:var(--panel-2);color:var(--accent-2);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;
+}
+.rank li:first-child .no{background:var(--accent);color:#1b0f18;}
+.rank .body b{color:var(--text);}
+.rank .body span{display:block;font-size:13.2px;color:var(--muted);}
+/* 时间线 */
+.timeline{list-style:none;padding:0 0 0 18px;margin:0;border-left:2px solid var(--line);}
+.timeline li{position:relative;padding:0 0 16px 16px;font-size:14.2px;}
+.timeline li::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);}
+.timeline .t{color:var(--accent-2);font-size:13px;display:block;margin-bottom:2px;}
+/* 引语 */
+.quote-card{
+  background:linear-gradient(135deg,var(--panel-2),var(--bg-soft));border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:18px;position:relative;font-size:14.4px;color:#ded8ef;
+}
+.quote-card::before{content:"“";position:absolute;top:-8px;left:12px;font-size:44px;color:var(--accent);opacity:.5;font-family:Georgia,serif;}
+.quote-card cite{display:block;margin-top:10px;font-size:12.8px;color:var(--muted);font-style:normal;}
+/* 标签索引 */
+.tagindex{display:flex;flex-wrap:wrap;gap:8px;}
+/* 侧栏 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 268px;gap:var(--gap);align-items:start;}
+.aside{position:sticky;top:118px;}
+.aside .panel{margin-bottom:var(--gap);}
+.aside h3{font-size:15px;color:var(--accent-2);margin-bottom:10px;}
+.aside nav a{display:block;font-size:13.8px;color:var(--muted);padding:5px 8px;border-radius:6px;border-left:2px solid transparent;}
+.aside nav a:hover,.aside nav a.active{background:var(--panel-2);color:var(--text);text-decoration:none;border-left-color:var(--accent);}
+/* 页脚 */
+footer.site{
+  border-top:1px solid var(--line);background:var(--bg-soft);margin-top:20px;padding:34px 0 22px;font-size:13.8px;color:var(--muted);
+}
+.ftgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px;}
+.ftgrid h4{color:var(--text);font-size:14px;margin-bottom:10px;}
+.ftgrid a{display:block;color:var(--muted);padding:3px 0;font-size:13.4px;}
+.ftgrid a:hover{color:var(--accent-2);}
+.ft-brand{display:flex;align-items:center;gap:10px;color:var(--text);font-weight:700;font-size:17px;margin-bottom:10px;}
+.ft-brand svg{width:34px;height:34px;flex:none;}
+.ft-bottom{border-top:1px solid var(--line);margin-top:24px;padding-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.8px;color:#7d7599;}
+/* 回到顶部 */
+#toTop{
+  position:fixed;right:18px;bottom:22px;z-index:90;width:44px;height:44px;border-radius:50%;
+  background:var(--accent);color:#1b0f18;border:none;cursor:pointer;font-size:18px;font-weight:700;
+  display:none;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(255,107,107,.4);
+}
+#toTop.show{display:flex;}
+/* 响应式 */
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr;}
+  .aside{position:static;margin-top:6px;}
+  .hero-inner{grid-template-columns:1fr;gap:20px;padding:40px 0 34px;}
+  .hero-art{height:220px;order:-1;}
+  .grid3{grid-template-columns:repeat(2,1fr);}
+  .catgrid{grid-template-columns:repeat(3,1fr);}
+  .ftgrid{grid-template-columns:1fr 1fr;}
+  .span2{grid-column:auto;}
+}
+@media (max-width:720px){
+  .menubtn{display:inline-flex;}
+  .mainnav{
+    display:none;width:100%;flex-direction:column;align-items:stretch;gap:2px;margin-left:0;
+    padding-top:8px;border-top:1px solid var(--line);margin-top:8px;
+  }
+  .mainnav.open{display:flex;}
+  .mainnav a{padding:9px 10px;}
+  .hd-tools{margin-left:auto;}
+  .searchbox input{width:110px;}
+  .grid3,.grid2,.catgrid{grid-template-columns:1fr;}
+  .compare{grid-template-columns:1fr;}
+  .compare .col:first-child{border-right:none;border-bottom:1px solid var(--line);}
+  .ftgrid{grid-template-columns:1fr 1fr;}
+  #toTop{bottom:16px;right:14px;}
+}
+@media (max-width:420px){
+  .wrap{padding:0 12px;}
+  .panel{padding:16px;}
+  .hero-stats{gap:16px;}
+  .searchbox input{width:84px;}
+  .ftgrid{grid-template-columns:1fr;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="stickgroup">
+  <div class="notice" role="region" aria-label="更新公告">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>麻豆不打烊</b>片单更新：11 月 6 日新增《夜班第十二小时》《末班车向北》两条目，11 月 7 日上线创作者访谈第二期。</span>
+      <a href="/#latest">查看更新记录</a>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="/#top" aria-label="麻豆不打烊首页">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#272142"/>
+          <circle cx="32" cy="32" r="15" fill="none" stroke="#ff6b6b" stroke-width="4"/>
+          <polygon points="28,24 44,32 28,40" fill="#ffd166"/>
+          <rect x="48" y="9" width="7" height="7" rx="2" fill="#6bc9ff"/>
+        </svg>
+        <span class="name">麻豆不<em>打烊</em></span>
+      </a>
+      <button class="menubtn" id="menuBtn" aria-expanded="false" aria-controls="mainnav" aria-label="展开或收起导航菜单">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect y="2" width="16" height="2" fill="#ece9f5"/><rect y="7" width="16" height="2" fill="#ece9f5"/><rect y="12" width="16" height="2" fill="#ece9f5"/></svg>
+        菜单
+      </button>
+      <nav class="mainnav" id="mainnav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选片单</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#talk">观众评论</a>
+      </nav>
+      <div class="hd-tools">
+        <form class="searchbox" id="searchForm" role="search">
+          <label for="q" class="skip">站内搜索</label>
+          <input type="search" id="q" name="q" placeholder="搜片名、类型、创作者" autocomplete="off">
+          <button type="submit">搜索</button>
+        </form>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div id="top"></div>
+
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="kicker">深夜片单 · 第 46 周</span>
+      <h1 id="heroTitle">麻豆不打烊<span>：把深夜两小时交给对的一部</span></h1>
+      <p class="lede">整理每周上线的条目、创作者近况与观众实感反馈。片单按类型与时长拆开，方便你按剩余时间挑片，而不是在列表里反复划走。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#picks">看本周精选</a>
+        <a class="btn btn-ghost" href="/#guide">先读选片指南</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="n">46</div><div class="l">本周更新条目</div></div>
+        <div><div class="n">12</div><div class="l">分类频道</div></div>
+        <div><div class="n">7</div><div class="l">创作者访谈</div></div>
+        <div><div class="n">11/08</div><div class="l">数据核对日</div></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 300" role="img" aria-label="夜色中的播放窗口与片单卡片抽象构图">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2d2350"/><stop offset="1" stop-color="#1a1530"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ff6b6b"/><stop offset="1" stop-color="#ff9f6b"/>
+          </linearGradient>
+        </defs>
+        <rect x="24" y="36" width="300" height="200" rx="16" fill="url(#g1)" stroke="#3a3060"/>
+        <rect x="24" y="36" width="300" height="34" rx="16" fill="#332a52"/>
+        <circle cx="46" cy="53" r="5" fill="#ff6b6b"/>
+        <circle cx="64" cy="53" r="5" fill="#ffd166"/>
+        <circle cx="82" cy="53" r="5" fill="#6bc9ff"/>
+        <circle cx="174" cy="136" r="34" fill="none" stroke="#ff6b6b" stroke-width="4" opacity=".9"/>
+        <polygon points="164,118 196,136 164,154" fill="#ffd166"/>
+        <rect x="60" y="196" width="150" height="8" rx="4" fill="#4b3f74"/>
+        <rect x="60" y="212" width="100" height="8" rx="4" fill="#3b3160"/>
+        <rect x="252" y="96" width="140" height="66" rx="10" fill="#241d3d" stroke="#3a3060"/>
+        <rect x="264" y="110" width="60" height="8" rx="4" fill="url(#g2)"/>
+        <rect x="264" y="126" width="110" height="6" rx="3" fill="#4b3f74"/>
+        <rect x="264" y="140" width="80" height="6" rx="3" fill="#4b3f74"/>
+        <rect x="252" y="176" width="140" height="66" rx="10" fill="#241d3d" stroke="#3a3060"/>
+        <rect x="264" y="190" width="48" height="8" rx="4" fill="#6bc9ff"/>
+        <rect x="264" y="206" width="110" height="6" rx="3" fill="#4b3f74"/>
+        <rect x="264" y="220" width="66" height="6" rx="3" fill="#4b3f74"/>
+        <circle cx="352" cy="60" r="18" fill="#ffd166" opacity=".15"/>
+        <circle cx="352" cy="60" r="9" fill="#ffd166" opacity=".8"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+  <div class="wrap">
+    <p class="search-msg" id="searchMsg" role="status" aria-live="polite"></p>
+
+    <div class="layout">
+      <div class="content-col">
+
+        <!-- 领域概览 -->
+        <section class="panel" id="overview" aria-labelledby="ovTitle">
+          <div class="sec-head">
+            <h2 id="ovTitle">深夜观影领域概览</h2>
+            <span class="sub">从片长、类型到发布节奏的一次性说明</span>
+          </div>
+          <p>深夜时段的观看需求与白天不同：可用时间集中在 22:00 到次日 01:30，中途被打断的概率高，选择成本比片荒更让人头疼。当前这一领域的条目大致分成四类——40 分钟以内的短剧、60 到 90 分钟的单片、分集连载、以及创作者自剪的幕后素材。四类的观看节奏、更新频率、讨论方式都不一样，混在一个列表里看，很容易按下播放又退出来。</p>
+          <div class="grid3" style="margin-top:6px;">
+            <div class="card">
+              <h3>短剧条目</h3>
+              <p>多在 25–40 分钟，单集完结，适合零点前完成一次完整观看。11 月 1 日至 7 日上线的 18 条中，14 条为短剧。</p>
+              <span class="tag">通勤也能看完</span>
+            </div>
+            <div class="card">
+              <h3>单片与迷你剧</h3>
+              <p>60–90 分钟，通常两到三天内分批放出。分集节奏不统一，是留言里被提及最多的体验差异点。</p>
+              <span class="tag alt">适合周末整块时间</span>
+            </div>
+            <div class="card">
+              <h3>幕后与创作者素材</h3>
+              <p>拍摄花絮、脚本朗读、选角记录。时长零碎，5–20 分钟为主，适合在正式条目之前当作背景补充。</p>
+              <span class="tag rose">看懂作品前置信息</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 精选内容推荐 -->
+        <section class="panel" id="picks" aria-labelledby="pkTitle">
+          <div class="sec-head">
+            <h2 id="pkTitle">本周精选内容推荐</h2>
+            <span class="sub">按观看时长分组的四条，附上选择理由</span>
+          </div>
+          <div class="grid2">
+            <article class="card">
+              <img src="https://picsum.photos/seed/madou-night12/560/300" width="560" height="300" loading="lazy" alt="夜班走廊场景的片单封面示意" style="border-radius:8px;object-fit:cover;margin-bottom:10px;">
+              <h3>《夜班第十二小时》</h3>
+              <p>38 分钟，单集完结。场景集中在一层办公楼，靠台词推进。11 月 6 日上线，当晚评论区出现两轮关于结尾是否成立的争论。</p>
+              <span class="meta">时长 38 分钟 · 11 月 6 日</span>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/madou-lastbus/560/300" width="560" height="300" loading="lazy" alt="夜间末班车车厢内的片单封面示意" style="border-radius:8px;object-fit:cover;margin-bottom:10px;">
+              <h3>《末班车向北》</h3>
+              <p>72 分钟，分两集放出。第二集 11 月 6 日上架，比原计划晚一天。公路段落占比接近一半，适合不赶时间时看。</p>
+              <span class="meta">时长 72 分钟 · 11 月 6 日</span>
+            </article>
+            <article class="card">
+              <h3>《三号桌的第七次相亲》</h3>
+              <p>31 分钟，轻喜剧。场景单一但节奏快，适合已经过了零点、只想放松的时段。11 月 3 日上线，目前在本周播放时长榜排第三。</p>
+              <span class="meta">时长 31 分钟 · 11 月 3 日</span>
+            </article>
+            <article class="card">
+              <h3>创作者访谈：林晚照谈剪辑取舍</h3>
+              <p>26 分钟对谈，逐段拆解《夜班第十二小时》的三次剪辑改动，其中一段原片被删后放进花絮。11 月 7 日上线。</p>
+              <span class="meta">时长 26 分钟 · 11 月 7 日</span>
+            </article>
+          </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="panel" id="latest" aria-labelledby="ltTitle">
+          <div class="sec-head">
+            <h2 id="ltTitle">最新更新记录</h2>
+            <span class="sub">11 月 2 日至 11 月 8 日，按上线日期排列</span>
+          </div>
+          <ul class="list-tight">
+            <li><span class="date">11-07</span><span class="txt"><b>访谈第二期上线</b>，林晚照出镜，时长 26 分钟，含三段被删镜头说明。</span></li>
+            <li><span class="date">11-06</span><span class="txt"><b>《末班车向北》第二集</b>上架，比预告日期推迟一天；同日在片单页加了分集说明。</span></li>
+            <li><span class="date">11-06</span><span class="txt"><b>《夜班第十二小时》</b>单集上线，38 分钟，结尾处理成为当晚讨论焦点。</span></li>
+            <li><span class="date">11-05</span><span class="txt">《楼下的咖啡机》拍摄花絮更新，12 分钟，主要是选角试镜片段。</span></li>
+            <li><span class="date">11-03</span><span class="txt"><b>《三号桌的第七次相亲》</b>上线，31 分钟；当天播放时长进入本周前三。</span></li>
+            <li><span class="date">11-02</span><span class="txt">十月片单归档，10 月条目从首页移入历史列表，搜索仍可查到。</span></li>
+          </ul>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="panel" id="channels" aria-labelledby="chTitle">
+          <div class="sec-head">
+            <h2 id="chTitle">分类频道入口</h2>
+            <span class="sub">按类型、时长、创作者三种切法</span>
+          </div>
+          <div class="catgrid">
+            <a class="cat" href="/#picks"><b>深夜短剧</b><span>25–40 分钟 · 18 条</span></a>
+            <a class="cat" href="/#picks"><b>办公室题材</b><span>封闭场景 · 9 条</span></a>
+            <a class="cat" href="/#picks"><b>公路与夜行</b><span>移动镜头 · 7 条</span></a>
+            <a class="cat" href="/#picks"><b>轻喜剧</b><span>零门槛 · 12 条</span></a>
+            <a class="cat" href="/#guide"><b>一小时内看完</b><span>按剩余时间筛</span></a>
+            <a class="cat" href="/#deepdive"><b>结尾争议档</b><span>留言密集 · 5 条</span></a>
+            <a class="cat" href="/#talk"><b>观众实感反馈</b><span>按条目标注</span></a>
+            <a class="cat" href="/#creator"><b>创作者幕后</b><span>花絮与访谈 · 11 条</span></a>
+            <a class="cat" href="/#latest"><b>本周刚上线</b><span>11 月 2 日起</span></a>
+            <a class="cat" href="/#guide"><b>分集更新中</b><span>连载 6 条</span></a>
+            <a class="cat" href="/#rank"><b>播放时长榜</b><span>每周一更新</span></a>
+            <a class="cat" href="/#faq"><b>观看常见疑问</b><span>设备与节奏</span></a>
+          </div>
+        </section>
+
+        <!-- 深度解析：唯一主体阅读区 -->
+        <section class="panel article" id="deepdive" aria-labelledby="ddTitle">
+          <div class="sec-head">
+            <h2 id="ddTitle">深度解析：四十分钟是不是深夜内容的最优长度</h2>
+            <span class="sub">基于本周 46 条上线条目的时长与完成率对照</span>
+          </div>
+          <p>先把结论放前面：在本周统计口径内，38 到 42 分钟这一档的条目完成率明显高于 70 分钟以上档，但差距主要出现在 23:30 之后开始的观看，而不是全时段。也就是说，“短更好”这个说法只在特定时间窗口成立，把它当成普遍规律会误判。</p>
+
+          <h3>一、时长与完成率的对照数据</h3>
+          <p>取 11 月 1 日至 7 日上线的 46 条条目，按开始观看时间分成两段，统计完成率（播放到片尾最后 30 秒内）。数据由条目播放端记录汇总，样本量有限，仅代表这一周。</p>
+          <table class="checktable">
+            <thead>
+              <tr><th>时长档</th><th>条数</th><th>23:30 前开始</th><th>23:30 后开始</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>25–40 分钟</td><td>21</td><td>88%</td><td>81%</td></tr>
+              <tr><td>41–60 分钟</td><td>13</td><td>85%</td><td>72%</td></tr>
+              <tr><td>61–90 分钟</td><td>8</td><td>79%</td><td>54%</td></tr>
+              <tr><td>90 分钟以上 / 连载</td><td>4</td><td>74%</td><td>46%</td></tr>
+            </tbody>
+          </table>
+          <p>23:30 前，四个档位的完成率相差不到 14 个百分点；过了 23:30，最长档和中短档相差 35 个百分点。差距不是线性拉开的，而是在 60 分钟以上突然掉下去。这更像是“被打断”带来的阶梯式流失，而不是观众对时长的均匀偏好。</p>
+
+          <h3>二、《末班车向北》推迟一天说明了什么</h3>
+          <p>11 月 5 日预告第二集 11 月 5 日上线，实际 11 月 6 日才上架，晚了一天。创作者在访谈里给的说法是“调色版本没通过内部复核”，属于创作流程解释；片单页给出的说明只有一句“上线时间调整”，属于平台侧转述；而留言区有观众推测是为避开同日的《夜班第十二小时》，这属于推测，没有证据支撑，只能记作一种说法。</p>
+          <p>拆开看：事实是推迟一天；回应是调色未过复核；转述只写了时间调整；推测是撞档避让。三者在同一条目上并存，混着说就会把推测当成事实传播。这也是本页坚持把事实、回应、转述、推测分开标注的原因。</p>
+
+          <h3>三、结尾争议：可核对的部分和不可核对的部分</h3>
+          <p>《夜班第十二小时》的结尾让主角留在原地，没有交代后续。可核对的部分：全片 38 分钟，最后 6 分钟只有一个固定机位；花絮里提到原片有一个 90 秒的走廊镜头被删；11 月 6 日当晚评论区出现两轮集中讨论，第二轮发生在 23:50 之后。不可核对的部分是“这个结尾是否成立”，它取决于观众期待的闭合程度，无法用数据判定。</p>
+          <blockquote>
+            一位在 11 月 6 日 23:52 留言的观众写道：“前 32 分钟都在铺垫他会走，最后 6 分钟一步没动，我第一反应是被耍了，第二天重看才觉得这个静止是故意的。”
+            <cite>留言区原文，未改写措辞</cite>
+          </blockquote>
+          <p>这条留言的价值在于它给出了时间点、重看行为和一个具体的反转判断。把类似留言按“首看反应”和“重看后反应”分开标记，比笼统统计好评率更能说明结尾争议的性质。</p>
+
+          <h3>四、把判断拆成可核对的三项</h3>
+          <p>“深夜内容应该做短”这个判断，可以拆成三项分别验证：第一，23:30 后开始的观看是否更容易中断——本周数据支持，61 分钟以上档下降 25 个百分点；第二，短条目是否普遍质量更高——不支持，本周 25–40 分钟档里有 3 条在留言中被明确批评节奏拖沓；第三，观众是否主动偏好短——无法用播放数据证明，因为多数人只是顺着片单顺序点开。三项里只有第一项站得住。</p>
+
+          <h3>五、对创作者的实际含义</h3>
+          <p>如果主要发布窗口在 23:00 之后，把单片压到 40 分钟以内确实能减少流失；但如果发布窗口在 21:00–22:30，时长并不是首要变量，剪辑密度和开头三分钟的钩子影响更大。本周《三号桌的第七次相亲》31 分钟，完成率反而低于同档平均，原因是前 4 分钟铺垫过长。时长给了它机会，内容没接住。</p>
+        </section>
+
+        <!-- 体验指南：编号步骤 -->
+        <section class="panel" id="guide" aria-labelledby="gdTitle">
+          <div class="sec-head">
+            <h2 id="gdTitle">深夜选片体验指南</h2>
+            <span class="sub">五步，按剩余时间倒推</span>
+          </div>
+          <ol class="steps">
+            <li><b>先算剩余时间。</b>把起床时间往前推，留出 15 分钟缓冲。剩 40 分钟就别点 72 分钟的《末班车向北》，第一集看完会被迫中断。</li>
+            <li><b>再看到底是单片还是连载。</b>连载条目每周更新，11 月 6 日《末班车向北》第二集推迟一天就是例子，追连载要接受节奏变动。</li>
+            <li><b>检查开头三分钟。</b>片单页有时长和简介，但没有节奏信息。可以先看花絮或访谈，26 分钟的创作者对谈通常会把节奏问题讲清楚。</li>
+            <li><b>决定是否重看。</b>结尾争议类条目首看和重看感受差异大，《夜班第十二小时》的留言里就有明确的两次反应对比。</li>
+            <li><b>记录实感。</b>看完在留言区写一句具体的话，带时间点和场景，比“好看”“一般”更有参考价值。</li>
+          </ol>
+        </section>
+
+        <!-- 对照面板 -->
+        <section class="panel" id="compare" aria-labelledby="cpTitle">
+          <div class="sec-head">
+            <h2 id="cpTitle">单片与连载：两种观看体验对照</h2>
+            <span class="sub">同一周内的实际差异</span>
+          </div>
+          <div class="compare">
+            <div class="col">
+              <h4>单片（38 分钟内）</h4>
+              <ul>
+                <li>一次看完，节奏完整，适合 23:30 后</li>
+                <li>本周 21 条，完成率 81%–88%</li>
+                <li>结尾争议集中在最后 6 分钟</li>
+                <li>幕后素材通常一次放出</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h4>连载（分集放出）</h4>
+              <ul>
+                <li>需跨天观看，节奏受上线计划影响</li>
+                <li>本周 6 条，其中 1 条推迟一天</li>
+                <li>讨论分散在各集留言，不易汇总</li>
+                <li>花絮与访谈往往补在集间空档</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 榜单 -->
+        <section class="panel" id="rank" aria-labelledby="rkTitle">
+          <div class="sec-head">
+            <h2 id="rkTitle">本周播放时长榜</h2>
+            <span class="sub">统计区间 11 月 1 日至 11 月 7 日</span>
+          </div>
+          <ol class="rank">
+            <li><span class="no">1</span><div class="body"><b>《夜班第十二小时》</b><span>38 分钟 · 11 月 6 日上线 · 两日进入榜首</span></div></li>
+            <li><span class="no">2</span><div class="body"><b>《末班车向北》第一集</b><span>72 分钟拆分 · 11 月 4 日上线</span></div></li>
+            <li><span class="no">3</span><div class="body"><b>《三号桌的第七次相亲》</b><span>31 分钟 · 11 月 3 日上线</span></div></li>
+            <li><span class="no">4</span><div class="body"><b>创作者访谈：林晚照</b><span>26 分钟 · 11 月 7 日上线</span></div></li>
+            <li><span class="no">5</span><div class="body"><b>《楼下的咖啡机》花絮</b><span>12 分钟 · 11 月 5 日更新</span></div></li>
+          </ol>
+        </section>
+
+        <!-- 时间线 -->
+        <section class="panel" id="timeline" aria-labelledby="tlTitle">
+          <div class="sec-head">
+            <h2 id="tlTitle">11 月第一周条目时间线</h2>
+            <span class="sub">只看上线与调整动作</span>
+          </div>
+          <ul class="timeline">
+            <li><span class="t">11 月 2 日</span>十月片单归档，10 月条目移入历史列表。</li>
+            <li><span class="t">11 月 3 日</span>《三号桌的第七次相亲》上线，31 分钟。</li>
+            <li><span class="t">11 月 4 日</span>《末班车向北》第一集上线。</li>
+            <li><span class="t">11 月 5 日</span>《楼下的咖啡机》花絮更新；第二集预告维持当日上线。</li>
+            <li><span class="t">11 月 6 日</span>《夜班第十二小时》上线；《末班车向北》第二集推迟一天后上架。</li>
+            <li><span class="t">11 月 7 日</span>创作者访谈第二期上线，含被删镜头说明。</li>
+          </ul>
+        </section>
+
+        <!-- 引语卡 -->
+        <section class="panel" id="creator" aria-labelledby="crTitle">
+          <div class="sec-head">
+            <h2 id="crTitle">创作者说</h2>
+            <span class="sub">来自 11 月 7 日访谈原文</span>
+          </div>
+          <div class="quote-card">
+            我们剪到第三版才把走廊那 90 秒拿掉。留着，观众会以为他要走；拿掉，观众只能盯着他不动。两种反应都在预期内，但后者更接近我想要的。
+            <cite>—— 林晚照，谈《夜班第十二小时》结尾处理，11 月 7 日访谈</cite>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="panel" id="faq" aria-labelledby="fqTitle">
+          <div class="sec-head">
+            <h2 id="fqTitle">常见问题</h2>
+            <span class="sub">围绕观看节奏与条目信息</span>
+          </div>
+          <details>
+            <summary>深夜短剧一般多长时间，能一次看完吗？</summary>
+            <div class="ans">本周上线的短剧集中在 25 到 40 分钟，单集完结，23:30 之前开始基本能一次看完。超过 40 分钟的条目多为分集，需要跨天。</div>
+          </details>
+          <details>
+            <summary>分集条目推迟上线，哪里能看到准确时间？</summary>
+            <div class="ans">片单页的更新记录会标出实际日期，推迟也会写明。11 月 6 日《末班车向北》第二集就比预告晚一天，记录里保留了两条时间。</div>
+          </details>
+          <details>
+            <summary>结尾争议大的条目值得先看还是先看评论？</summary>
+            <div class="ans">先看正片更合适。争议点集中在最后 6 分钟，提前读评论会削弱首看反应；首看后再读留言，能对照自己和他人的判断差异。</div>
+          </details>
+          <details>
+            <summary>花絮和创作者访谈有什么用？</summary>
+            <div class="ans">花絮通常包含选角试镜与被删镜头，访谈会解释剪辑取舍。看正片前用 10 到 20 分钟了解背景，能减少中途退出。</div>
+          </details>
+          <details>
+            <summary>手机上看，片单会不会太长导致滑不完？</summary>
+            <div class="ans">分类入口按类型和时长分开，手机宽度下转为单列，每个分类是一个可直接点的入口。片单页本身不做无限滚动。</div>
+          </details>
+          <details>
+            <summary>播放时长榜怎么统计？</summary>
+            <div class="ans">按条目累计播放时长排序，统计区间固定为一周。11 月 1 日至 7 日这期以《夜班第十二小时》居首，两日内进入榜首。</div>
+          </details>
+        </section>
+
+        <!-- 观众评论 -->
+        <section class="panel" id="talk" aria-labelledby="tkTitle">
+          <div class="sec-head">
+            <h2 id="tkTitle">观众评论</h2>
+            <span class="sub">选自 11 月 5 日至 7 日留言，保留原话</span>
+          </div>
+          <div class="comment">
+            <div class="who">阿原<span>11 月 6 日 23:52 · 《夜班第十二小时》</span></div>
+            <p>前 32 分钟都在铺垫他会走，最后一步没动。首看觉得被耍，重看一遍才接受这个处理。</p>
+          </div>
+          <div class="comment">
+            <div class="who">周末不睡<span>11 月 6 日 21:10 · 《末班车向北》第二集</span></div>
+            <p>说好 5 号，6 号才看到。调色没过复核这个解释能接受，但片单页那句“上线时间调整”太敷衍了。</p>
+          </div>
+          <div class="comment">
+            <div class="who">林间小路<span>11 月 4 日 19:26 · 《三号桌的第七次相亲》</span></div>
+            <p>前四分钟全是点单和寒暄，节奏明显慢。撑过去之后后半段还行，31 分钟里浪费了四分钟有点可惜。</p>
+          </div>
+          <div class="comment">
+            <div class="who">夜航船<span>11 月 5 日 22:40 · 《楼下的咖啡机》花絮</span></div>
+            <p>试镜片段比正片有意思，能看到两个人对同一段台词的理解差很多。12 分钟不算长，值得看。</p>
+          </div>
+          <div class="comment">
+            <div class="who">半杯冰美式<span>11 月 7 日 00:15 · 创作者访谈</span></div>
+            <p>访谈里说删了 90 秒走廊镜头，这个信息比正片本身有用。但那三期访谈时长不统一，26 分钟和前面 40 多分钟的对谈比，剪得有点赶。</p>
+          </div>
+          <div class="comment">
+            <div class="who">不熬夜做不到<span>11 月 3 日 23:05 · 《三号桌的第七次相亲》</span></div>
+            <p>轻喜剧定位没问题，适合过了零点不想动脑的时候。就是配角戏份太少，看完记不住第二个人长什么样。</p>
+          </div>
+        </section>
+
+        <!-- 相关资讯 -->
+        <section class="panel" id="news" aria-labelledby="nwTitle">
+          <div class="sec-head">
+            <h2 id="nwTitle">相关资讯</h2>
+            <span class="sub">本周与条目相关的三条动态</span>
+          </div>
+          <div class="grid3">
+            <div class="card">
+              <h3>十月片单归档完成</h3>
+              <p>11 月 2 日，10 月的 39 条条目从首页移入历史列表。搜索仍可查到，分类入口暂不显示十月内容。</p>
+            </div>
+            <div class="card">
+              <h3>分集说明加入片单页</h3>
+              <p>11 月 6 日起，连载条目在片单页标注每集时长与计划上线日，用户可在点开前判断是否跨天观看。</p>
+            </div>
+            <div class="card">
+              <h3>访谈栏目调整时长</h3>
+              <p>第二期访谈控制在 26 分钟，比第一期短 15 分钟。制作方称后续统一在 25 到 30 分钟之间。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 相关推荐：标签索引 -->
+        <section class="panel" id="related" aria-labelledby="rlTitle">
+          <div class="sec-head">
+            <h2 id="rlTitle">相关推荐</h2>
+            <span class="sub">按观众常搜的词整理</span>
+          </div>
+          <div class="tagindex">
+            <a class="tag" href="/#picks">深夜短剧推荐</a>
+            <a class="tag" href="/#picks">办公室题材短剧</a>
+            <a class="tag" href="/#picks">公路夜行片单</a>
+            <a class="tag" href="/#guide">一小时内看完</a>
+            <a class="tag alt" href="/#rank">本周播放时长榜</a>
+            <a class="tag alt" href="/#deepdive">结尾争议解析</a>
+            <a class="tag alt" href="/#creator">创作者幕后访谈</a>
+            <a class="tag rose" href="/#latest">11 月新上线条目</a>
+            <a class="tag rose" href="/#compare">单片与连载怎么选</a>
+            <a class="tag" href="/#talk">观众实感评论</a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 侧栏 -->
+      <aside class="aside" aria-label="侧栏">
+        <div class="panel">
+          <h3>栏目导航</h3>
+          <nav id="sideNav" aria-label="侧栏页内导航">
+            <a href="/#overview">领域概览</a>
+            <a href="/#picks">精选内容推荐</a>
+            <a href="/#latest">最新更新</a>
+            <a href="/#channels">分类入口</a>
+            <a href="/#deepdive">深度解析</a>
+            <a href="/#guide">体验指南</a>
+            <a href="/#compare">单片与连载对照</a>
+            <a href="/#rank">播放时长榜</a>
+            <a href="/#timeline">条目时间线</a>
+            <a href="/#faq">常见问题</a>
+            <a href="/#talk">观众评论</a>
+            <a href="/#related">相关推荐</a>
+          </nav>
+        </div>
+        <div class="panel">
+          <h3>本周数字</h3>
+          <ul class="list-tight">
+            <li><span class="date">46</span><span class="txt">上线条目</span></li>
+            <li><span class="date">21</span><span class="txt">25–40 分钟档</span></li>
+            <li><span class="date">81%</span><span class="txt">深夜短剧完成率</span></li>
+            <li><span class="date">1</span><span class="txt">推迟上线条目</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="ftgrid">
+      <div>
+        <div class="ft-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#272142"/>
+            <circle cx="32" cy="32" r="15" fill="none" stroke="#ff6b6b" stroke-width="4"/>
+            <polygon points="28,24 44,32 28,40" fill="#ffd166"/>
+          </svg>
+          麻豆不打烊
+        </div>
+        <p>每周整理上线条目与创作者动态，把时长、类型、更新节奏摊开写清楚，方便按剩余时间挑片。</p>
+      </div>
+      <div>
+        <h4>内容频道</h4>
+        <a href="/#picks">精选内容推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#rank">播放时长榜</a>
+      </div>
+      <div>
+        <h4>阅读栏目</h4>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#compare">单片与连载对照</a>
+        <a href="/#timeline">条目时间线</a>
+      </div>
+      <div>
+        <h4>互动与答疑</h4>
+        <a href="/#faq">常见问题</a>
+        <a href="/#talk">观众评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#related">相关推荐</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>示例数据说明：页面内条目、播放统计、留言均为演示用示例内容，日期区间 2026-10-10 至 2026-11-08，不代表真实作品或平台数据。</span>
+      <span>© 2026 麻豆不打烊 · 内容更新至 11 月 8 日</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到页面顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainnav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && nav.classList.contains('open')){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // 搜索：本地查找
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var msg = document.getElementById('searchMsg');
+
+  function norm(s){ return (s || '').replace(/\s+/g,'').toLowerCase(); }
+
+  function doSearch(kw){
+    var q = norm(kw);
+    if(!q){ msg.textContent='请输入要查找的片名、类型或创作者。'; msg.classList.add('show'); return; }
+    var nodes = document.querySelectorAll('main .card h3, main .list-tight li, main .rank .body b, main details summary, main .comment, main .cat b, main .article h3');
+    var firstHit = null, count = 0;
+    nodes.forEach(function(n){
+      var own = norm(n.textContent);
+      var hit = own.indexOf(q) !== -1;
+      var item = n.closest('details, .card, li, .comment, .cat') || n;
+      if(hit){
+        count++;
+        if(!firstHit) firstHit = item;
+      }
+    });
+    if(count === 0){
+      msg.textContent='没有找到与“' + kw + '”相关的条目。可试试“夜班第十二小时”“轻喜剧”“访谈”等关键词。';
+      msg.classList.add('show');
+    } else {
+      msg.textContent='找到 ' + count + ' 条与“' + kw + '”相关的内容，已在页面内定位到第一条。';
+      msg.classList.add('show');
+      if(firstHit && firstHit.id){
+        firstHit.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+      } else if(firstHit){
+        var y = firstHit.getBoundingClientRect().top + window.pageYOffset - 118;
+        window.scrollTo({top: y, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+      }
+    }
+  }
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      doSearch(input.value);
+    });
+  }
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.pageYOffset > 520){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  });
+
+  // 侧栏滚动高亮
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  if(sections.length && links.length){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var id = en.target.id;
+          links.forEach(function(a){
+            var href = a.getAttribute('href') || '';
+            if(href.indexOf('#' + id) !== -1){ a.classList.add('active'); }
+            else { a.classList.remove('active'); }
+          });
+        }
+      });
+    }, {rootMargin:'-120px 0px -55% 0px', threshold:0});
+    sections.forEach(function(s){ obs.observe(s); });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "麻豆不打烊",
+  "alternateName": "麻豆不打烊片单",
+  "description": "整理深夜观影片单、创作者动态与观看体验资料的中文站点。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "深夜短剧一般多长时间，能一次看完吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "本周上线的短剧集中在 25 到 40 分钟，单集完结，23:30 之前开始基本能一次看完。超过 40 分钟的条目多为分集，需要跨天。"}
+    },
+    {
+      "@type": "Question",
+      "name": "分集条目推迟上线，哪里能看到准确时间？",
+      "acceptedAnswer": {"@type": "Answer", "text": "片单页的更新记录会标出实际日期，推迟也会写明。11 月 6 日《末班车向北》第二集就比预告晚一天，记录里保留了两条时间。"}
+    },
+    {
+      "@type": "Question",
+      "name": "结尾争议大的条目值得先看还是先看评论？",
+      "acceptedAnswer": {"@type": "Answer", "text": "先看正片更合适。争议点集中在最后 6 分钟，提前读评论会削弱首看反应；首看后再读留言，能对照自己和他人的判断差异。"}
+    },
+    {
+      "@type": "Question",
+      "name": "花絮和创作者访谈有什么用？",
+      "acceptedAnswer": {"@type": "Answer", "text": "花絮通常包含选角试镜与被删镜头，访谈会解释剪辑取舍。看正片前用 10 到 20 分钟了解背景，能减少中途退出。"}
+    },
+    {
+      "@type": "Question",
+      "name": "手机上看，片单会不会太长导致滑不完？",
+      "acceptedAnswer": {"@type": "Answer", "text": "分类入口按类型和时长分开，手机宽度下转为单列，每个分类是一个可直接点的入口。片单页本身不做无限滚动。"}
+    },
+    {
+      "@type": "Question",
+      "name": "播放时长榜怎么统计？",
+      "acceptedAnswer": {"@type": "Answer", "text": "按条目累计播放时长排序，统计区间固定为一周。11 月 1 日至 7 日这期以《夜班第十二小时》居首，两日内进入榜首。"}
+    }
+  ]
+}
+</script>
+</body>
+            </html>
